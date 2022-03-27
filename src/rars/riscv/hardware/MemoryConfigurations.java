@@ -116,21 +116,21 @@ public class MemoryConfigurations {
     // Compact allows 16 bit addressing, text segment starts at 0
     private static int[] textBasedCompactConfigurationItemValues = {
             0x00000000, // .text Base Address
-            0x00001000, // Data Segment base address
+            0x80000000, // Data Segment base address
             0x00001000, // .extern Base Address
             0x00001800, // Global Pointer $gp)
             0x00002000, // .data base Address
             0x00003000, // heap base address
             0x00003ffc, // stack pointer $sp
             0x00003ffc, // stack base address
-            0x00003fff, // highest address in user space
-            0x00004000, // lowest address in kernel space
+            0x87ffffff, // highest address in user space
+            0x8fffffff, // lowest address in kernel space
             0x00007f00, // MMIO base address
             0x00007fff, // highest address in kernel (and memory)
-            0x00003fff, // data segment limit address
+            0x87ffffff, // data segment limit address
             0x00000ffc, // text limit address
             0x00003000, // stack limit address
-            0x00007fff  // memory map limit address
+            0xffffffff  // memory map limit address
     };
 
 

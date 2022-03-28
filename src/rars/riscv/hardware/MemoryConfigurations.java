@@ -75,21 +75,21 @@ public class MemoryConfigurations {
 
     // Default configuration comes from SPIM
     private static int[] defaultConfigurationItemValues = {
-            0x00400000, // .text Base Address
-            0x10000000, // Data Segment base address
-            0x10000000, // .extern Base Address
-            0x10008000, // Global Pointer $gp)
-            0x10010000, // .data base Address
-            0x10040000, // heap base address
-            0x7fffeffc, // stack pointer $sp (from SPIM not MIPS)
-            0x7ffffffc, // stack base address
-            0x7fffffff, // highest address in user space
-            0x80000000, // lowest address in kernel space
-            0xffff0000, // MMIO base address
+            0x00000000, // .text Base Address
+            0x80000000, // Data Segment base address
+            0x00001000, // .extern Base Address
+            0x00000000, // Global Pointer $gp)
+            0x80000000, // .data base Address
+            0x00003000, // heap base address
+            0x00000000, // stack pointer $sp
+            0x00000000, // stack base address
+            0x87ffffff, // highest address in user space
+            0x8fffffff, // lowest address in kernel space
+            0x00007f00, // MMIO base address
             0xffffffff, // highest address in kernel (and memory)
-            0x7fffffff, // data segment limit address
-            0x0ffffffc, // text limit address
-            0x10040000, // stack limit address
+            0x87ffffff, // data segment limit address
+            0x00000ffc, // text limit address
+            0x00003000, // stack limit address
             0xffffffff  // memory map limit address
     };
 

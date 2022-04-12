@@ -75,9 +75,9 @@ public class MemoryConfigurations {
 
     // Default configuration comes from SPIM
     private static int[] defaultConfigurationItemValues = {
-            0x00001000, // .text Base Address
+            0x00000000, // .text Base Address
             0x80000000, // Data Segment base address
-            0x00008000, // .extern Base Address
+            0x00001000, // .extern Base Address
             0x00000000, // Global Pointer $gp)
             0x80000000, // .data base Address
             0x00003000, // heap base address
